@@ -1,10 +1,12 @@
 import { useState } from "react"
 import { Links } from "../common/Links"
+import { getCv } from "../../lib/cv"
 
 type ContactSectionProps = { email: string }
 
 export function ContactSection({ email }: ContactSectionProps) {
   const [message, setMessage] = useState("")
+  const cv = getCv()
 
   const copyEmail = async () => {
     try {
@@ -38,7 +40,11 @@ export function ContactSection({ email }: ContactSectionProps) {
               label: "LinkedIn",
               href: "https://www.linkedin.com/in/fernandozamorano/",
             },
-            { label: "CV en PDF", href: "./FernandoZamoranoPortfolio.pdf" },
+            {
+              label: cv.linkLabel,
+              href: cv.href,
+              download: cv.downloadName,
+            },
           ]}
         />
         <p className="muted" role="status" style={{ margin: "1rem 0 0" }}>

@@ -2,6 +2,8 @@ export type ExternalLink = {
   label: string
   href: string
   placeholder?: boolean
+  /** Descarga el archivo en lugar de abrirlo. Un string define el nombre del archivo. */
+  download?: boolean | string
 }
 
 export type CaseStudyItem = {

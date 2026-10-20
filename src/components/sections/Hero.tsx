@@ -1,4 +1,8 @@
+import { getCv } from "../../lib/cv"
+
 export function Hero() {
+  const cv = getCv()
+
   return (
     <section className="hero wrap">
       <p className="status">
@@ -20,10 +24,10 @@ export function Hero() {
         </a>
         <a
           className="btn primary"
-          href="./FernandoZamoranoPortfolio.pdf"
-          download
+          href={cv.href}
+          download={cv.downloadName}
         >
-          Descargar CV
+          {cv.buttonLabel}
         </a>
         <a className="btn" href="#contact">
           Contactar
