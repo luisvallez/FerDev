@@ -10,6 +10,42 @@ export const portfolio = {
   email: "FerCoding@proton.me",
   projects: [
     {
+      name: "Appora",
+      year: "2026",
+      description:
+        "Aplicación de escritorio para Windows que reúne las actualizaciones disponibles de winget, Microsoft Store y Windows Update en un solo lugar, para que decidas qué instalar.",
+      highlight:
+        "Incluye selección individual o masiva, instalación por lotes con progreso, historial con reversión de versiones, paquetes ignorados, interfaz en español e inglés, temas claro y oscuro y actualizaciones automáticas mediante Tauri Updater.",
+      image: "./Appora.png",
+      imageAlt:
+        "Interfaz de Appora mostrando las actualizaciones disponibles de winget",
+      technologies: ["Tauri", "Rust", "JavaScript", "PowerShell"],
+      links: [
+        {
+          label: "Descargar Appora",
+          href: "https://github.com/luisvallez/Appora/releases/latest",
+        },
+        {
+          label: "Ver en GitHub",
+          href: "https://github.com/luisvallez/Appora",
+        },
+      ],
+      caseStudy: [
+        {
+          label: "Problema",
+          text: "Windows reparte sus actualizaciones entre winget, Microsoft Store y Windows Update, así que revisar qué hay pendiente implica saltar entre tres lugares distintos. Además, instalar todo por separado hace fácil perder de vista qué se actualizó y cuándo.",
+        },
+        {
+          label: "Enfoque",
+          text: "Construí Appora con Tauri para tener una app de escritorio ligera, sin Chromium incluido. La aplicación consulta las tres fuentes, unifica los resultados y permite instalar por lotes mostrando el progreso y el registro de cada paquete.",
+        },
+        {
+          label: "Resultado",
+          text: "Una sola interfaz, en español e inglés y con temas claro y oscuro, para detectar, instalar y dar seguimiento a las actualizaciones, con historial de instalaciones, reversión de versiones compatibles y actualizaciones automáticas de la propia app.",
+        },
+      ],
+    },
+    {
       name: "Focus App",
       year: "2026",
       description:
@@ -87,7 +123,7 @@ export const portfolio = {
     },
     {
       title: "Móvil y escritorio",
-      items: ["Capacitor", "Python", "Flet"],
+      items: ["Tauri", "Rust", "Capacitor", "Python", "Flet"],
     },
     // {
     //   title: "Backend y datos",
